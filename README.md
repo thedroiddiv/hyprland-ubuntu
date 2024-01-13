@@ -22,6 +22,21 @@ GRUB_CMDLINE_LINUX_DEFAULT='quiet splash nvidia_drm.modeset=1
 ```
 
 # Installing Hyprland
+Either run the script or follow step-by-step
+TODO: Step by Step process
+
+# Post-Install Config (NVIDIA Only)
+Add these env vars for `.config/hypr/hyprland.conf`
+```bash
+env = LIBVA_DRIVER_NAME,nvidia
+env = XDG_SESSION_TYPE,wayland
+env = GBM_BACKEND,nvidia-drm
+env = __GLX_VENDOR_LIBRARY_NAME,nvidia
+env = WLR_NO_HARDWARE_CURSORS,1
+```
+If Hyprland crashes on launch, then remove `env = GBM_BACKEND,nvidia-drm`
+
+[Source](https://wiki.hyprland.org/Nvidia/)
 
 ## Scripts based on
 [Script](https://gist.github.com/Vertecedoc4545/3b077301299c20c5b9b4db00f4ca6000)
