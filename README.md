@@ -138,11 +138,11 @@ chmod a+rw hyprland-source
 cd hyprland-source/
 ```
 
-##### Apply NVIDIA patch (optional, needed only when building for NVIDIA)
+Apply NVIDIA patch (optional, needed only when building for NVIDIA)
 ```bash
 sed 's/glFlush();/glFinish();/g' -i subprojects/wlroots/render/gles2/renderer.c
 ```
-##### Build and install
+Build and install
 ```bash
 meson setup build -Dbuildtype=release
 ninja -C build
