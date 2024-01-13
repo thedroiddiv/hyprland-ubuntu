@@ -8,15 +8,14 @@
 - Ubuntu 23.10 (Mantic Minotaur)
 - Kernel: 6.5.0-14-generic
 
-# Installing Nvidia Drivers (Closed Source)
-
+# NVIDIA Only
+### Installing Nvidia Drivers (Closed Source)
 ```bash
 sudo apt -y update
 sudo apt -y upgrade
 sudo ubuntu-drivers install
 ```
-
-# Adding DRM params  
+### Adding DRM params  
 - add `nvidia_drm.modeset=1` to `/etc/default/grub` in `GRUB_CMDLINE_LINUX_DEFAULT=`
 ```bash
 GRUB_CMDLINE_LINUX_DEFAULT='quiet splash nvidia_drm.modeset=1
