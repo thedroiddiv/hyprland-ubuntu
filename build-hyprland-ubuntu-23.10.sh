@@ -117,7 +117,7 @@ sed 's/glFlush();/glFinish();/g' -i subprojects/wlroots/render/gles2/renderer.c
 meson setup build -Dbuildtype=release
 ninja -C build
 cd build
-sudo ninja-install
+sudo ninja install
 
 cd ../..
 
