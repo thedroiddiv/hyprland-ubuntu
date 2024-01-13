@@ -23,6 +23,7 @@ GRUB_CMDLINE_LINUX_DEFAULT='quiet splash nvidia_drm.modeset=1
 
 # Installing Hyprland
 Either run the script or follow step-by-step
+
 TODO: Step by Step process
 
 # Post-Install Config (NVIDIA Only)
